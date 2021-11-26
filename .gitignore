@@ -58,3 +58,16 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+FigNetDemo/Server/AgarIOCommon/bin/
+FigNetDemo/Server/AgarIOCommon/obj/
+FigNetDemo/Server/AgarIOGame/bin/
+FigNetDemo/Server/AgarIOGame/obj/
+FigNetDemo/Server/AgarIOServer/bin/
+FigNetDemo/Server/AgarIOServer/obj/
+FigNetDemo/UnityClient/AgarIOClient/Library/
+FigNetDemo/UnityClient/AgarIOClient/Logs/
+FigNetDemo/UnityClient/AgarIOClient/webgl/
+FigNetDemo/UnityClient/AgarIOClient/obj/
+FigNetDemo/UnityClient/AgarIOClient/binaries/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
+FigNetDemo/UnityClient/AgarIOClient/binaries/
+FigNetDemo/UnityClient/AgarIOClient/Temp/
