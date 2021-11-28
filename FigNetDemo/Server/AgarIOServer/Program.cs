@@ -2,7 +2,6 @@
 using FigNet.Server;
 using System.Threading;
 using System.Diagnostics;
-using AgarIOGame.Game;
 
 namespace AgarIOServer
 {
@@ -13,7 +12,7 @@ namespace AgarIOServer
         static void Main(string[] args)
         {
            // TcpProvider.Module.Load();
-            ENetProvider.Module.Load();
+           //ENetProvider.Module.Load();
            // WebSocketProvider.Module.Load();
             LiteNetLibProvider.Module.Load();
 
@@ -30,15 +29,7 @@ namespace AgarIOServer
                 
             };
 
-            //var connectionManager = new ConnectionManager();
-            //FN.BindServerListner(connectionManager);
-            //var module = new GameplayModule();
-            //serverApp.AddModule(module);
             serverApp.SetUp();
-
-            
-           // Default_Serializer.RegisterPayloads();
-           // Default_Serializer.RegisterHandlers();
 
             Run(serverApp);
             serverApp.TearDown();
