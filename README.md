@@ -1,9 +1,8 @@
 # Agar.FigNet
 A Demo App demonstrating features of FigNet.
+![Tiling system](https://i.imgur.com/XQefkgX.gifv)
 
-![Tiling system](https://s10.gifyu.com/images/Agar.FigNet.gif)
-
-<img src="https://s10.gifyu.com/images/Agar.FigNet.gif" width="900" height="455" />
+<img src="https://i.imgur.com/XQefkgX.gifv" width="850" height="429" />
 
 https://ahmed310.itch.io/agarfignet
 
