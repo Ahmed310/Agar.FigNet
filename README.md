@@ -1,6 +1,9 @@
 # Agar.FigNet
 A Demo App demonstrating features of FigNet.
+
 ![Tiling system](https://s10.gifyu.com/images/Agar.FigNet.gif)
+
+<img src="https://s10.gifyu.com/images/Agar.FigNet.gif" width="900" height="455" />
 
 https://ahmed310.itch.io/agarfignet
 
@@ -14,11 +17,11 @@ https://ahmed310.itch.io/agarfignet
 This repo contains 2 folders 1: Server it contains visual studio project 2: UnityClient it contains game client.
 
 ### Server Project Structure
-<img src="https://github.com/Ahmed310/MapTool_Unity/blob/main/Screenshots/maptool_view.png"/>
+<img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/server_projects.png"/>
 
 ### Unity Project
 It contains Game scene (Assets/Scenes/Game)
 
 Enter Server Ip in config from Config Window from tool bar (FigNet/Settings)
-<img src="https://github.com/Ahmed310/MapTool_Unity/blob/main/Screenshots/maptool_view.png"/>
+<img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/client_config.png"/>
 
