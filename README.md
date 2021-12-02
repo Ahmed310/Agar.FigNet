@@ -1,6 +1,6 @@
 # Agar.FigNet
 A Demo App demonstrating features of FigNet.
-(itch.io)(https://ahmed310.itch.io/agarfignet)
+- (itch.io)(https://ahmed310.itch.io/agarfignet)
 
 ![Tiling system](https://github.com/Ahmed310/RiseInc/blob/main/screenshots/Agar.FigNet.gif)
 
@@ -12,8 +12,8 @@ A Demo App demonstrating features of FigNet.
 ## Setup
 
 This repo contains following folders 
-1: Server it contains visual studio project 
-2: UnityClient it contains game client.
+- Server it contains visual studio project 
+- UnityClient it contains game client.
 
 ### Server Project Structure
 <img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/server_projects.png"/>
