@@ -11,7 +11,9 @@ A Demo App demonstrating features of FigNet.
 
 ## Setup
 
-This repo contains 2 folders 1: Server it contains visual studio project 2: UnityClient it contains game client.
+This repo contains following folders 
+1: Server it contains visual studio project 
+2: UnityClient it contains game client.
 
 ### Server Project Structure
 <img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/server_projects.png"/>
