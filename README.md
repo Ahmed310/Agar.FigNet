@@ -1,7 +1,8 @@
 # Agar.FigNet
 A Demo App demonstrating features of FigNet.
-[Imgur](https://i.imgur.com/XQefkgX.gifv)
-[itch.io](https://ahmed310.itch.io/agarfignet)
+(itch.io)(https://ahmed310.itch.io/agarfignet)
+
+![Tiling system](https://github.com/Ahmed310/RiseInc/blob/main/screenshots/Agar.FigNet.gif)
 
 ## Tools & Dependencies
 - Unity 2021.1.26f1
