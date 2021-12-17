@@ -25,5 +25,6 @@ Enter Server Ip in config from Config Window from tool bar (FigNet/Settings)
 <img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/client_config.png"/>
 
 ### Credits
-Logo: www.pngaaa.com/detail/561372
-Client side app is build on top of this repo https://github.com/JasperDre/Agar
+
+- Logo: www.pngaaa.com/detail/561372
+- Client side app is build on top of this repo https://github.com/JasperDre/Agar
