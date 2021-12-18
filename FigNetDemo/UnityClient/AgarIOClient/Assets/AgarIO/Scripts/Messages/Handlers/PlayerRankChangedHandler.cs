@@ -18,6 +18,5 @@ public class PlayerRankChangedHandler : IHandler
 
         GameManager.GetInstance().UpdateLeaderBoard();
 
-        RankChangedData.Release(data);
     }
 }

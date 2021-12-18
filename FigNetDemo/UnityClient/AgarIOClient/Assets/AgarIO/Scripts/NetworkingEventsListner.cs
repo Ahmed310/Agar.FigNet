@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using FigNet.Core;
 using AgarIOCommon;
+using System;
 
 public class NetworkingEventsListner : MonoBehaviour, IClientSocketListener
 {
@@ -38,8 +39,13 @@ public class NetworkingEventsListner : MonoBehaviour, IClientSocketListener
     public void OnNetworkSent(Message message, DeliveryMethod method, byte channelId = 0)
     {
     }
+
+    public void OnProcessPayloadException(ExceptionType type, ushort messageId, Exception e)
+    {
+       
+    }
     #endregion
-   
+
 
     void Awake()
     {

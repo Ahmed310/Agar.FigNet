@@ -19,6 +19,5 @@ public class SpawnFoodHandler : IHandler
 
         NetworkEntitiesContainer.AddNetworkFood(data.Id, netFood);
 
-        SpawnFoodData.Release(data);
     }
 }

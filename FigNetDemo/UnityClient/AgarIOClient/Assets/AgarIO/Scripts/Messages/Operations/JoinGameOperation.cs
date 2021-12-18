@@ -14,15 +14,9 @@ public class JoinGameOperation
         payload.Color = color;
         payload.Position = position;
 
-        var msg = Message.Acquire();
+        var msg = new Message();
         msg.Id = mId;
         msg.Payload = payload;
-
-        msg.OnMessageSent = () => {
-
-            Message.Release(msg);
-            JoinGameData.Release(payload);
-        };
 
         return msg;
     }

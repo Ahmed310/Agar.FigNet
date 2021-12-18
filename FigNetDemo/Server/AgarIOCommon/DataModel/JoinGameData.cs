@@ -6,28 +6,13 @@ namespace AgarIOCommon.DataModel
 {
     public class JoinGameData
     {
-        private static Pool<JoinGameData> Pool = new Pool<JoinGameData>(() => new JoinGameData(), (op) => op.Reset(), 4);
-
         public string Name; 
         public Vector3 Color;
         public Vector2 Position;
 
-
-        public void Reset() 
-        {
-            Name = "";
-            Color = Vector3.Zero;
-            Position = Vector2.Zero;
-        }
-
         public static JoinGameData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(JoinGameData obj)
-        {
-            Pool.Release(obj);
+            return new JoinGameData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)

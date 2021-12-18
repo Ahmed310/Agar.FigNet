@@ -5,8 +5,6 @@ namespace AgarIOCommon.DataModel
 {
     public class FoodEatenData
     {
-        private static Pool<FoodEatenData> Pool = new Pool<FoodEatenData>(() => new FoodEatenData(), (op) => op.Reset(), 4);
-
         public uint FoodId;
         public uint PlayerId;
 
@@ -19,12 +17,7 @@ namespace AgarIOCommon.DataModel
 
         public static FoodEatenData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(FoodEatenData obj)
-        {
-            Pool.Release(obj);
+            return new FoodEatenData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)

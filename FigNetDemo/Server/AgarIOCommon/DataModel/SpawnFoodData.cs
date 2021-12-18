@@ -6,8 +6,6 @@ namespace AgarIOCommon.DataModel
 {
     public class SpawnFoodData
     {
-        private static Pool<SpawnFoodData> Pool = new Pool<SpawnFoodData>(() => new SpawnFoodData(), (op) => op.Reset(), 4);
-
         public uint Id; 
         public Vector2 Position;
         public byte ColorId;
@@ -20,14 +18,10 @@ namespace AgarIOCommon.DataModel
 
         public static SpawnFoodData Acquire()
         {
-            return Pool.Acquire();
+            return new SpawnFoodData();
         }
 
-        public static void Release(SpawnFoodData obj)
-        {
-            Pool.Release(obj);
-        }
-
+       
         public static object Deserialize(ArraySegment<byte> buffer)
         {
             var data = BitBufferPool.GetInstance();

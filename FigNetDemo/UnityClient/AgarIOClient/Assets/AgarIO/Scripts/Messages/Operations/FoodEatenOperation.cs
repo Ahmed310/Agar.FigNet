@@ -11,15 +11,9 @@ public class FoodEatenOperation
         payload.FoodId = foodId;
         payload.PlayerId = playerId;
 
-        var msg = Message.Acquire();
+        var msg = new Message();
         msg.Id = mId;
         msg.Payload = payload;
-
-        msg.OnMessageSent = () => {
-
-            Message.Release(msg);
-            FoodEatenData.Release(payload);
-        };
 
         return msg;
     }

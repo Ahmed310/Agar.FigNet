@@ -6,9 +6,6 @@ namespace AgarIOCommon.DataModel
 {
     public class SpawnLocalPlayerData
     {
-
-        private static Pool<SpawnLocalPlayerData> Pool = new Pool<SpawnLocalPlayerData>(() => new SpawnLocalPlayerData(), (op) => op.Reset(), 4);
-
         public uint Id;
         public Vector2 Position;
 
@@ -21,12 +18,7 @@ namespace AgarIOCommon.DataModel
 
         public static SpawnLocalPlayerData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(SpawnLocalPlayerData obj)
-        {
-            Pool.Release(obj);
+            return new SpawnLocalPlayerData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)

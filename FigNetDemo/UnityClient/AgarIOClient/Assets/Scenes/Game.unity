@@ -3917,18 +3917,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632912744332869335}
   m_CullTransparentMesh: 1
---- !u!114 &632912744332869323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632912744332869335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040c8b2bc45d0a84494891ee0e5fc32f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &632912744332869332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3989,7 +3977,6 @@ GameObject:
   - component: {fileID: 632912744332869332}
   - component: {fileID: 632912744332869322}
   - component: {fileID: 632912744332869333}
-  - component: {fileID: 632912744332869323}
   m_Layer: 5
   m_Name: Image_overlay
   m_TagString: Untagged

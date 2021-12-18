@@ -13,15 +13,9 @@ namespace AgarIOGame.Messages.Operations
 
             payload.Id = Id;
 
-            var msg = Message.Acquire();
+            var msg = new Message();
             msg.Id = mId;
             msg.Payload = payload;
-
-            msg.OnMessageSent = () => {
-
-                Message.Release(msg);
-                PlayerLeftData.Release(payload);
-            };
 
             return msg;
         }

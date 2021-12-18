@@ -6,8 +6,6 @@ namespace AgarIOCommon.DataModel
 {
     public class PositionSyncData
     {
-        private static Pool<PositionSyncData> Pool = new Pool<PositionSyncData>(() => new PositionSyncData(), (op) => op.Reset(), 64);
-
         public uint Id; 
         public Vector2 Position;
 
@@ -20,12 +18,7 @@ namespace AgarIOCommon.DataModel
 
         public static PositionSyncData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(PositionSyncData obj)
-        {
-            Pool.Release(obj);
+            return new PositionSyncData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)

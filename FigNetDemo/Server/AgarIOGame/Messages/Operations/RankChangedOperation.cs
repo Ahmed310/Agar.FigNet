@@ -14,15 +14,9 @@ namespace AgarIOGame.Messages.Operations
             payload.Id = id;
             payload.Rank = rank;
 
-            var msg = Message.Acquire();
+            var msg = new Message();
             msg.Id = mId;
             msg.Payload = payload;
-
-            msg.OnMessageSent = () => {
-
-                Message.Release(msg);
-                RankChangedData.Release(payload);
-            };
 
             return msg;
         }

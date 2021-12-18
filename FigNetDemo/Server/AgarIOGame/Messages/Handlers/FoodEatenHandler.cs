@@ -17,8 +17,6 @@ namespace AgarIOGame.Messages.Handlers
             var data = message.Payload as FoodEatenData;
 
             zone.FoodEaten(data.FoodId, data.PlayerId);
-
-            FoodEatenData.Release(data);
         }
     }
 }

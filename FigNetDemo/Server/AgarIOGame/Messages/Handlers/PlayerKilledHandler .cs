@@ -20,7 +20,6 @@ namespace AgarIOGame.Messages.Handlers
             FN.Logger.Error($"p1 {duel1} | {duel2} p2");
             zone.PlayerKilled(data.playerKilledId, data.KilledById);
 
-            PlayerKilledData.Release(data);
         }
     }
 }

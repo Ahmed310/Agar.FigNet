@@ -42,5 +42,10 @@ namespace AgarIOGame.Game
             var zone = ServiceLocator.GetService<Zone>();
             zone.RemovePlayer(peer);
         }
+
+        public void OnProcessPayloadException(ExceptionType type, ushort messageId, Exception e)
+        {
+            FN.Logger.Exception(e, $"{type}|{messageId}");
+        }
     }
 }

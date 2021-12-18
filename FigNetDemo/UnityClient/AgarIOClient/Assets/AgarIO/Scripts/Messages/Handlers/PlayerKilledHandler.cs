@@ -26,6 +26,5 @@ public class PlayerKilledHandler : IHandler
 
         FN.Logger.Info($"On Player Killed");
 
-        PlayerKilledData.Release(data);
     }
 }

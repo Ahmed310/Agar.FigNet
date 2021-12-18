@@ -11,13 +11,10 @@ namespace AgarIOGame.Messages.Handlers
 
         public void HandleMessage(Message message, uint PeerId)
         {
-            var peer = FN.PeerCollection.GetPeerByID(PeerId);
             var zone = ServiceLocator.GetService<Zone>();
-
             var data = message.Payload as PositionSyncData;
 
             zone.UpdatePosition(PeerId, data);
-            PositionSyncData.Release(data);
         }
     }
 }

@@ -28,8 +28,6 @@ namespace AgarIOGame.Messages.Handlers
             
             zone.AddPlayer(peer, joinGameData.Name, joinGameData.Color, joinGameData.Position);
 
-
-            JoinGameData.Release(joinGameData);
         }
     }
 }

@@ -39,5 +39,10 @@ namespace AgarIOServer
             FN.Logger.Info($"Player Disconnected: {peer.Id}");
 
         }
+
+        public void OnProcessPayloadException(ExceptionType type, ushort messageId, Exception e)
+        {
+            FN.Logger.Exception(e, $"{type}|{messageId}");
+        }
     }
 }

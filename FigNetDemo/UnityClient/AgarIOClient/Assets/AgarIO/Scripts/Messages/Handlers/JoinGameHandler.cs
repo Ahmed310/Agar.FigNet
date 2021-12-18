@@ -13,6 +13,5 @@ public class JoinGameHandler : IHandler
         GameManager.GetInstance().OnGameStarted();
         FN.Logger.Info($"On Game Joined...");
 
-        JoinGameData.Release(joinGameData);
     }
 }

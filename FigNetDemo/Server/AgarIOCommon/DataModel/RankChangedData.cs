@@ -1,13 +1,10 @@
 ﻿using System;
 using FigNet.Core;
-using System.Numerics;
 
 namespace AgarIOCommon.DataModel
 {
     public class RankChangedData
     {
-        private static Pool<RankChangedData> Pool = new Pool<RankChangedData>(() => new RankChangedData(), (op) => op.Reset(), 4);
-
         public uint Id;
         public uint Rank;
 
@@ -19,14 +16,10 @@ namespace AgarIOCommon.DataModel
 
         public static RankChangedData Acquire()
         {
-            return Pool.Acquire();
+            return new RankChangedData();
         }
 
-        public static void Release(RankChangedData obj)
-        {
-            Pool.Release(obj);
-        }
-
+       
         public static object Deserialize(ArraySegment<byte> buffer)
         {
             var data = BitBufferPool.GetInstance();

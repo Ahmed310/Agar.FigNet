@@ -5,10 +5,7 @@ namespace AgarIOCommon.DataModel
 {
     public class PlayerLeftData
     {
-        private static Pool<PlayerLeftData> Pool = new Pool<PlayerLeftData>(() => new PlayerLeftData(), (op) => op.Reset(), 4);
         public uint Id;
-
-
         public void Reset()
         {
             Id = 0;
@@ -16,12 +13,7 @@ namespace AgarIOCommon.DataModel
 
         public static PlayerLeftData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(PlayerLeftData obj)
-        {
-            Pool.Release(obj);
+            return new PlayerLeftData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)
@@ -29,7 +21,7 @@ namespace AgarIOCommon.DataModel
             var data = BitBufferPool.GetInstance();
             data.FromArray(buffer);
 
-            var payload = Acquire();      // release it after use [see PingCountHandler.cs ln 21]
+            var payload = Acquire();      
 
             payload.Id = data.ReadUInt();
 

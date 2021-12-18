@@ -18,6 +18,5 @@ public class FoodEatenHandler : IHandler
         var playerView = NetworkEntitiesContainer.GetPlayerById(eatenBy);
         playerView.EatFood();
 
-        FoodEatenData.Release(data);
     }
 }

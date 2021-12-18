@@ -16,15 +16,10 @@ namespace AgarIOGame.Messages.Operations
             payload.Position = position;
             payload.ColorId = colorId;
 
-            var msg = Message.Acquire();
+            var msg = new Message();
             msg.Id = mId;
             msg.Payload = payload;
 
-            msg.OnMessageSent = () => {
-
-                Message.Release(msg);
-                SpawnFoodData.Release(payload);
-            };
             return msg;
         }
     }

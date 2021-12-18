@@ -13,6 +13,5 @@ public class PlayerLeftHandler : IHandler
         NetworkEntitiesContainer.RemovePlayer(data.Id);
         FN.Logger.Info($"On Player Left");
 
-        PlayerLeftData.Release(data);
     }
 }

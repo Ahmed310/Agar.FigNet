@@ -7,8 +7,6 @@ namespace AgarIOCommon.DataModel
 {
     public class SpawnRemotePlayerData
     {
-        private static Pool<SpawnRemotePlayerData> Pool = new Pool<SpawnRemotePlayerData>(() => new SpawnRemotePlayerData(), (op) => op.Reset(), 4);
-
         public uint Id;
         public string Name;
         public Vector3 Color;
@@ -16,24 +14,10 @@ namespace AgarIOCommon.DataModel
         public uint Rank;
         public uint Score;
 
-        public void Reset()
-        {
-            Id = 0;
-            Name = "";
-            Color = Vector3.Zero;
-            Position = Vector2.Zero;
-            Rank = 0;
-            Score = 0;
-        }
-
+       
         public static SpawnRemotePlayerData Acquire()
         {
-            return Pool.Acquire();
-        }
-
-        public static void Release(SpawnRemotePlayerData obj)
-        {
-            Pool.Release(obj);
+            return new SpawnRemotePlayerData();
         }
 
         public static object Deserialize(ArraySegment<byte> buffer)

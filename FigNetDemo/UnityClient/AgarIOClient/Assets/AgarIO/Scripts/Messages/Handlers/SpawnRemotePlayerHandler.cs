@@ -22,7 +22,6 @@ public class SpawnRemotePlayerHandler : IHandler
             Score = data.Score
         };
         NetworkEntitiesContainer.AddNetworkPlayer(data.Id, netPlayer);
-        SpawnRemotePlayerData.Release(data);
         //FN.Logger.Info($"On spawn remote player...{data.Id}|{data.Name} - score {data.Score} - - rank {data.Rank} pos {netPlayer.Position.X}|{netPlayer.Position.Y}");
     }
 }

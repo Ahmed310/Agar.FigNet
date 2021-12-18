@@ -13,15 +13,9 @@ public class PlayerKilledOperation
         payload.KilledById = killedById;
         payload.Score = 0;
 
-        var msg = Message.Acquire();
+        var msg = new Message();
         msg.Id = mId;
         msg.Payload = payload;
-
-        msg.OnMessageSent = () => {
-
-            Message.Release(msg);
-            PlayerKilledData.Release(payload);
-        };
 
         return msg;
     }

@@ -17,6 +17,5 @@ public class PositionSyncHandler : IHandler
             player.UpdatePosition(data);
         }
 
-        PositionSyncData.Release(data);
     }
 }

@@ -22,7 +22,6 @@ public class SpawnLocalPlayerHandler : IHandler
         GameManager.MyID = data.Id;
         FN.Logger.Info($"On spawn local player...{data.Id}");
 
-        SpawnLocalPlayerData.Release(data);
         GameManager.GetInstance().UpdateScore(0);
     }
 }
