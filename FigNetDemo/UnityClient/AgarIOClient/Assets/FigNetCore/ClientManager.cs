@@ -38,10 +38,20 @@ namespace FigNet
 
         public void Process()
         {
-            for (int i = 0; i < FN.Connections?.Count; i++)
+            try
             {
-                FN.Connections[i].Process();
+                for (int i = 0; i < FN.Connections?.Count; i++)
+                {
+                    FN.Connections[i].Process();
+                }
+
+                TimerScheduler.Tick(Time.deltaTime);
             }
+            catch (System.Exception ex)
+            {
+                Debug.LogException(ex);
+            }
+            
         }
 
         public void TearDown()

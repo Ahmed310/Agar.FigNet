@@ -20,7 +20,7 @@ public class NetworkPlayerView : MonoBehaviour
     private bool IsInit = false;
 
     private float TIME_DELTA;
-
+    private static float MOVEMENT_SPEED = 9f;
     [SerializeField]
     private Collider2D[] Colliders;
 
@@ -59,7 +59,13 @@ public class NetworkPlayerView : MonoBehaviour
             {
                 EatFood();
             }
-            Invoke(nameof(EnableCollision), 1f);
+
+            // enable player colliders after 3 sec [saves him from eaten by other players]
+            TimerScheduler.Schedule(3f, () => {
+
+                EnableCollision();
+            });
+
         }
         SetName(networkPlayer.Name);
     }
@@ -69,7 +75,7 @@ public class NetworkPlayerView : MonoBehaviour
     IEnumerator SendPositionUpdate()
     {
         var wait = new WaitForSeconds(interval);
-        for (; ; )
+        for (; ;)
         {
             if (previousPosition != transform.position)
             {
@@ -135,10 +141,10 @@ public class NetworkPlayerView : MonoBehaviour
             moveUpdateTime = 1f;
         }
 
-        this.transform.position = Vector3.Lerp(transform.position, itemPosition, moveUpdateTime);
+        this.transform.position = Vector3.Lerp(transform.position, itemPosition, Time.deltaTime * MOVEMENT_SPEED);
     }
 
-    void FixedUpdate() 
+    void Update() 
     {
         if (!IsMine && IsInit)
         {

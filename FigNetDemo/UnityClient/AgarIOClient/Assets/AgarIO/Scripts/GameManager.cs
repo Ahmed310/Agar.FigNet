@@ -1,9 +1,9 @@
 ﻿using FigNet.Core;
 using UnityEngine;
+using System.Linq;
 using AgarIOCommon;
 using AgarIOCommon.DataModel;
 using System.Collections.Generic;
-using System.Linq;
 
 public class GameManager : MonoBehaviour
 {

@@ -30,10 +30,11 @@ MonoBehaviour:
       AutoConnect: 1
       MaxChannels: 1
       DisconnectTimeout: 3000
-      EnableCheckSum: 1
+      EnableCheckSum: 0
       MaxSendQueueSize: 1000
       MaxReceiveQueueSize: 2000
       IsMultiThreaded: 1
+      EnableDebugMessages: 0
       Certificate:
         Name: 
         Password: 
