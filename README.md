@@ -21,7 +21,7 @@ This repo contains following folders
 ### Unity Project
 It contains Game scene (Assets/Scenes/Game)
 
-Enter Server Ip in config from Config Window from tool bar (Winidows/FigNet/Settings)
+Enter Server Ip in config from Config Window from tool bar (Windows/FigNet/Settings)
 <img src="https://github.com/Ahmed310/Agar.FigNet/blob/main/FigNetDemo/Screenshots/client_config.png"/>
 
 ### Credits
